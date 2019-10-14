@@ -1,0 +1,16 @@
+//큰놈, 작은놈, 같은놈
+#include<iostream>
+
+using namespace std;
+
+int main(void){
+    int n,temp1,temp2;
+    cin>>n;
+
+    for(int i=0; i<n; i++){
+        cin>>temp1>>temp2;
+        if(temp1>temp2) cout<<"#"<<i+1<<" "<<">"<<"\n";
+     	else if(temp1==temp2) cout<<"#"<<i+1<<" "<<"="<<"\n";
+        else cout<<"#"<<i+1<<" "<<"<"<<"\n";
+    }
+}
