@@ -1,0 +1,19 @@
+//평균값 구하기
+#include<iostream>
+
+using namespace std;
+
+int main(void){
+    int n,temp;
+    cin>>n;
+
+    for(int i=0; i<n; i++){
+        int sum = 0;
+        for(int j=0; j<10; j++){
+            cin>>temp;
+       		sum=sum+temp;
+        }
+        if(sum%10>=5) cout<<"#"<<i+1<<" "<<sum/10+1<<"\n";
+     	else cout<<"#"<<i+1<<" "<<sum/10<<"\n";
+    }
+}
