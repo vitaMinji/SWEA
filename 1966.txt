@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+int arr[51];
+
+int main(void){
+    int tc,num;
+    cin>>tc;
+    for(int i=0; i<tc; i++){
+        cin>>num;
+        for(int j=0; j<num; j++){
+            cin>>arr[j];
+        }
+        sort(arr,arr+num);
+        cout<<"#"<<i+1<<" ";
+        for(int j=0; j<num; j++){
+            cout<<arr[j]<<" ";
+        }
+        cout<<endl;
+    }
+}
