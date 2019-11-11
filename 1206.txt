@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void){
+    int left,right,res,temp,ans;
+    int ground;
+    
+    for(int i =0; i<10; i++){
+        cin>>ground;
+        int arr[ground];
+        ans=0;
+        for(int j=0; j<ground; j++){
+            cin>>arr[j];
+        }
+        left = arr[0];
+        right = arr[ground-1];
+        for(int j=2; j<ground - 2; j++){
+            temp = arr[j];
+            if(arr[j-1]>arr[j-2]) left = arr[j-1];
+            else left = arr[j-2];
+            
+            if(arr[j+1]>arr[j+2]) right = arr[j+1];
+            else right = arr[j+2];
+            
+            if(right>left) res = right;
+            else res = left;
+            
+            if(temp>res) ans+=temp-res;
+            
+        }
+        cout<<"#"<<i+1<<" "<<ans<<endl;
+    }
+}
