@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+int arr[15][15];
+int bug(int n, int m){
+    int max = 0;
+    int tempJ = 0;
+    for(int i=0; i<=n-m; i++){
+        for(int l = 0; l<=n-m; l++){
+        	int temp = 0;
+        	for(int j =l; j<l+m; j++){
+            	for(int k = i; k<i+m; k++){
+               		temp+=arr[j][k];
+           		}
+        	}
+        	if(temp>=max) max = temp;
+        	tempJ++;
+    	}
+    }
+    return max;
+}
+
+int main(void){
+    int tc,n,m;
+    cin>>tc;
+    for(int i=0; i<tc; i++){
+        cin>>n>>m;
+        for(int j=0; j<n; j++){
+            for(int k=0; k<n; k++){
+                cin>>arr[j][k];
+            }
+        }
+        cout<<"#"<<i+1<<" "<<bug(n,m)<<endl;
+        
+    }
+}
