@@ -1,0 +1,25 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(void){
+    int tc, tc2, temp;
+    cin>>tc;
+    for(int i=1; i<=tc; i++){
+        cin>>tc2;
+        vector<int> ve;
+        for(int j = 0; j<tc2; j++){
+            cin>>temp;
+            if(temp == 0){
+                ve.pop_back();
+            }else{
+                ve.push_back(temp);
+            }
+        }
+        int result = 0;
+        for(int j =0; j<ve.size(); j++){
+            result = result + ve[j];
+        }
+        cout<<"#"<<i<<" "<<result<<endl;
+       }    
+    }
+    
